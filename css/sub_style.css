@@ -868,14 +868,14 @@ hr{
 /* 상품후기, Q&A 배경색 */
 #bgp{
     width: 100%;
-    height: 2100px;
+    height: 1330px;
     background-color: #fce4e7;
 }
 
 /* 상품후기 */
 #section3{
     width: 1260px;
-    height: 1000px;
+    height: 630px;
     margin: 0 auto;
 }
 
@@ -934,7 +934,7 @@ hr{
 
 .s3_box2{
     width: 1100px;
-    height: 800px;
+    height: 550px;
     margin: 0 auto;
 }
 
@@ -1016,7 +1016,7 @@ hr{
 /* Q&A */
 #section4{
     width: 1260px;
-    height: 1000px;
+    height: 600px;
     margin: 0 auto;
 }
 
@@ -1058,7 +1058,7 @@ hr{
 
 .s4_box2{
     width: 1100px;
-    height: 900px;
+    height: 350px;
     margin: 0 auto;
 }
 
