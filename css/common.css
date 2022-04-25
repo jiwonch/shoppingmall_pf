@@ -60,10 +60,10 @@ header {
 }
 
 header nav {
-    width: 750px;
+    width: 780px;
     height: 45px;
     float: right;
-    margin: 15px 250px 0 50px;
+    margin: 15px 250px 0 20px;
 }
 
 header nav ul {
@@ -71,19 +71,50 @@ header nav ul {
     color: #333;
     font-weight: bold;
     font-family: 'Noto Sans KR', sans-serif;
+    display: inline;
+    position: relative;
 }
 
 header nav ul li {
     padding: 0 40px 0 20px;
-    float: left
+    display: inline-block;
 }
 
 header nav ul li a {
     color: #333;
+    display:inline-block;
 }
 
 header nav ul li a:hover {
     background-color: #fce4e7;
+}
+
+header nav ul li:hover ul{
+    display: block;
+}
+
+header nav ul li ul{
+    position: absolute;
+    display: none;
+    width: 200px;
+    top: 35px;
+}
+
+header nav ul li ul li{
+    background-color: white;
+    display: block;
+    width: 160px;
+    font-size: 20px;
+}
+
+header nav ul li ul li a{
+    display: block !important;
+}
+
+header nav ul li ul li a:hover{
+    color: yellowgreen;
+    background-color: #fce4e7;
+    
 }
 
 
