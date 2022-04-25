@@ -96,8 +96,11 @@ header nav ul li:hover ul{
 header nav ul li ul{
     position: absolute;
     display: none;
-    width: 200px;
+    width: 168px;
     top: 35px;
+    z-index: 2;
+    border: 4px solid #fce4e7;
+    text-align: left;
 }
 
 header nav ul li ul li{
