@@ -95,7 +95,9 @@
                     </tr>
                     <tr>
                         <th>주문수량</th>
-                        <td><input type="number" min="0" step="1" value="1"></td>
+                        <td><input id="total_n" type="number" min="0" step="1" value="1">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;총 가격:&nbsp;&nbsp; <span id="total"></span> 
+                        </td>
                     </tr>
                     <tr>
                         <th>옵션선택</th>
@@ -113,6 +115,19 @@
                     </tr>
                 </table>
             </div>
+
+            <!-- 수량 당 총 합계 표시 -->
+            <script>
+                $(document).ready(function(){
+                    $('#total_n').change(function(){
+                        var tot_n = $('#total_n').val();
+                        var all = tot_n * 14925 +"원";
+                        $('#total').text(all.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+
+);
+                    });
+                });
+            </script>
 
             <hr>
 
