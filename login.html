@@ -62,14 +62,40 @@
         </div>
         <div class="box2">
             <div class="box3">
-                <form>
-                    <h1>로그인</h1>
-                    <input type="email" placeholder="이메일을 입력하세요."><br>
-                    <input type="password" placeholder="비밀번호를 입력하세요."><br>
-                    <input type="checkbox" value="아이디 기억하기">아이디 기억하기
-                    <a href="index.html">회원가입</a>
-                    <a href="index.html">아이디/비밀번호찾기</a><br>
-                    <button type="submit">로그인</button><br>
+                <form id="loginform">
+                    <div class="loginbox">
+                        <h1 id="login_a">LOGIN</h1>
+                    </div>
+
+                    <div class="box4">
+                        <input id="email" type="email" placeholder="&nbsp;&nbsp;&nbsp;이메일을 입력하세요."><br>
+                    <input id="password" type="password" placeholder="&nbsp;&nbsp;&nbsp;비밀번호를 입력하세요."><br>
+                    </div>
+                    <span id ="remember"><input type="checkbox" value="아이디 기억하기">&nbsp;아이디 기억하기</span>
+                    <a href="index.html" id="mapply">회원가입</a>
+                    <a href="index.html" id="ips">아이디/비밀번호찾기</a><br>
+
+                    <div id="box_login_btn">
+                        <button id="btn_login" type="button" onClick="location.href='index.html'">로그인</button><br>
+                    </div>
+
+                    <!-- <script>
+                        document.ready(function (){
+                            function loginform(){
+                                if(document.email.value){
+                                    alert("아이디를 입력하세요");
+                                    document.email.focus();
+                                    return;
+                                }
+
+                                if(documnet.password.value){
+                                    alert("비밀번호를 입력하세요");
+                                    return;
+                                }
+                            } document.loginform.submit();
+                        }); 
+                    </script> -->
+
                     <div class="b2_box">
                         <div class="b2b">
                             <a href="index.html"><img src="img/login/kakao.png" alt="kakao"></a>

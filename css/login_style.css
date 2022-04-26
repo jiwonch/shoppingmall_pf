@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@600&display=swap');
 
 * {
     margin: 0;
@@ -23,7 +24,8 @@ a {
     width: 1260px;
     height: 700px;
     margin: 50px auto 80px;
-    border: 2px solid #333;
+    border-radius: 20px;
+    box-shadow: 2px 1px 10px 1px rgba(0,0,0,0.1);
 }
 
 .box1{
@@ -35,6 +37,7 @@ a {
 .box1 a img{
     width: 100%;
     height: 100%;
+    border-radius: 20px 20px 20px 20px;
 }
 
 .box2{
@@ -42,28 +45,121 @@ a {
     float: right;
     height: 100%;
     background-color: #fce4e7;
+    border-radius: 15px 20px 20px 15px;
 }
 
 .box3{
-    width: 100%;
-    height: 600px;
-    margin: 50px auto;
-    border: 2px solid #333;
+    width: 500px;
+    height: 450px;
+    margin: 120px auto;
+    background-color: #fff;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-evenly;
+}
+
+.loginbox{
+    margin: 40px auto 0;
+    width: 150px;
+    height: 40px;
+    color: #333;
+}
+
+#login_a {
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Hind', sans-serif;
+}
+
+.box4{
+    width: 300px;
+    height: 110px;
+    margin: 20px auto;
+}
+
+#email{
+    width: 300px;
+    height: 40px;
+    margin: 15px auto 0;
+    font-size: 15px;
+    background-color: #fce4e7;
+    border-radius: 20px;
+    border: none;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#password{
+    width: 300px;
+    height: 40px;
+    margin: 15px auto 0;
+    font-size: 15px;
+    background-color: #fce4e7;
+    border-radius: 20px;
+    border: none;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#remember {
+    margin: 5px 5px 0 90px;
+    font-size: 14px;
+    color: #333;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#mapply{
+    font-size: 14px;
+    margin: 5px 0 0px 5px;
+    color: #333;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#ips{
+    font-size: 14px;
+    margin: 5px 0 0px 0;
+    color: #333;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#mapply:hover{
+    color: yellowgreen;
+}
+
+#ips:hover{
+    color: yellowgreen;
+}
+
+#box_login_btn{
+    width: 120px;
+    height: 40px;
+    margin: 10px auto;
+    border-radius: 20px;
+}
+
+#btn_login{
+    width: 120px;
+    height: 35px;
+    border-radius: 15px;
+    background-color: #fce4e7;
+    border: 2px solid #eee;
+    color: #333;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
 }
 
 .b2_box{
-    width: 400px;
+    width: 320px;
     height: 70px;
-    margin: 20px auto;
-    border: 2px solid #333;
+    margin: 15px auto;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
 .b2b{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin: 8px 0 0 0;
 }
 
