@@ -62,39 +62,41 @@
         </div>
         <div class="box2">
             <div class="box3">
-                <form id="loginform">
+                <form id="loginform" name="fl" method="post">
                     <div class="loginbox">
                         <h1 id="login_a">LOGIN</h1>
                     </div>
 
                     <div class="box4">
-                        <input id="email" type="email" placeholder="&nbsp;&nbsp;&nbsp;이메일을 입력하세요."><br>
-                    <input id="password" type="password" placeholder="&nbsp;&nbsp;&nbsp;비밀번호를 입력하세요."><br>
+                        <input id="email" type="email" maxlength="20" placeholder="&nbsp;&nbsp;&nbsp;이메일을 입력하세요." onKeyDown="if(event.keyCode == 13) loginChk()"><br>
+                    <input id="password" type="password" maxlength="20" placeholder="&nbsp;&nbsp;&nbsp;비밀번호를 입력하세요." onKeyDown="if(event.keyCode == 13) loginChk()"><br>
                     </div>
                     <span id ="remember"><input type="checkbox" value="아이디 기억하기">&nbsp;아이디 기억하기</span>
                     <a href="index.html" id="mapply">회원가입</a>
                     <a href="index.html" id="ips">아이디/비밀번호찾기</a><br>
 
                     <div id="box_login_btn">
-                        <button id="btn_login" type="button" onClick="location.href='index.html'">로그인</button><br>
+                        <button id="btn_login" type="button" onClick="login_f();">로그인</button><br>
                     </div>
 
-                    <!-- <script>
-                        document.ready(function (){
-                            function loginform(){
-                                if(document.email.value){
-                                    alert("아이디를 입력하세요");
-                                    document.email.focus();
-                                    return;
-                                }
+                    <script>
 
-                                if(documnet.password.value){
-                                    alert("비밀번호를 입력하세요");
-                                    return;
+                        const email = document.getElementById("email");
+                        const password = document.getElementById("password");
+                        
+                            function login_f(){
+                                if(email.value=="cherry@dot.com"){
+                                    if(password.value=="12345"){
+                                        location.href='index.html';
+                                    } else{
+                                        alert('비밀번호를 다시 입력하세요.')
+                                    }
+                                } else{
+                                    alert('로그인에 실패했습니다.');
                                 }
-                            } document.loginform.submit();
-                        }); 
-                    </script> -->
+                            } 
+                        
+                    </script>
 
                     <div class="b2_box">
                         <div class="b2b">
