@@ -87,6 +87,7 @@ a {
     border-radius: 20px;
     border: none;
     font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
 }
 
 #password{
@@ -98,6 +99,7 @@ a {
     border-radius: 20px;
     border: none;
     font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
 }
 
 #remember {
