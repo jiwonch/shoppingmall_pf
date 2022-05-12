@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/sub_style.css">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+    <script src="js/sub_slidebox.js"></script>
 </head>
 
 <body>
-    
+
     <div id="setupbox">
         <a href="#"><img src="img/icon/top-arrow-messenger.png" alt="toparrow"></a>
     </div>
@@ -74,21 +75,8 @@
             <span class="next">&gt;</span>
         </div>
 
-        <!-- 상단 이미지 변경하기 -->
-        <script>
-            $('.prev').click(function () {
-                $('.sec1_slide li:last').prependTo('.sec1_slide');
-                $('.sec1_slide').css('margin-left', -500);
-                $('.sec1_slide').stop().animate({ marginLeft: 0 }, 800)
-            });
-
-            $('.next').click(function () {
-                $('.sec1_slide').stop().animate({ marginLeft: -500 }, 800, function () {
-                    $('.sec1_slide li:first').appendTo('.sec1_slide');
-                    $('.sec1_slide').css({ marginLeft: 0 })
-                });
-            });
-        </script>
+        <!-- 상단 상품이미지 수동 슬라이드 -->
+        <script src="js/sub_slidebox.js"></script>
 
         <div class="sec1_textbox">
             <div class="sec1_box1">
@@ -139,17 +127,7 @@
             </div>
 
             <!-- 수량 당 총 합계 표시 -->
-            <script>
-                $(document).ready(function () {
-                    $('#total_n').change(function () {
-                        var tot_n = $('#total_n').val();
-                        var all = tot_n * 14925 + "원";
-                        $('#total').text(all.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-
-                        );
-                    });
-                });
-            </script>
+            <script src="js/sub_amount.js"></script>
 
             <hr>
 
@@ -161,19 +139,8 @@
         </div>
     </div>
 
-    <!-- 클릭 시 버튼 색상 바꾸기 -->
-    <script>
-        $(document).ready(function () {
-            $('#btn3').click(function () {
-                if ($(this).hasClass("btn3_pink")) {
-                    $(this).removeClass("btn3_pink");
-                } else {
-                    $(this).addClass("btn3_pink");
-                }
-
-            });
-        });
-    </script>
+    <!-- 클릭 시 버튼 관심 상품 하트 색상 바꾸기 -->
+    <script src="js/sub_heart.js"></script>
 
     <!-- 상품 상세 메뉴 -->
     <nav id="sub_menu">
@@ -191,34 +158,7 @@
     </nav>
 
     <!-- 상품 상세 메뉴 클릭했을 시 색상유지 -->
-    <script>
-        $(document).ready(function () {
-            $('.detail').click(function () {
-                $("#sub_menu ul li a").removeClass("nav_active");
-                $(this).addClass("nav_active");
-            });
-
-            $('.review').click(function () {
-                $("#sub_menu a").removeClass("nav_active");
-                $(this).addClass("nav_active");
-            });
-
-            $('.q_a').click(function () {
-                $("#sub_menu ul li a").removeClass("nav_active");
-                $(this).addClass("nav_active");
-            });
-
-            $('.exchange').click(function () {
-                $("#sub_menu ul li a").removeClass("nav_active");
-                $(this).addClass("nav_active");
-            });
-
-            $('.best').click(function () {
-                $("#sub_menu ul li a").removeClass("nav_active");
-                $(this).addClass("nav_active");
-            });
-        });
-    </script>
+    <script src="js/sub_middlenav_color_restain.js"></script>
 
     <!-- 상품설명 -->
     <a name="detail">
@@ -541,51 +481,7 @@
         </a>
 
         <!-- 상품 후기 접었다가 펼치기 -->
-        <script>
-            $(document).ready(function () {
-                $(".s3_box2 tr:nth-of-type(even)").slideUp();
-
-                $(".toggle1").click(function () {
-                    $(".s3_box2 tr:nth-of-type(2)").slideToggle();
-                    $(".s3_box2 tr:nth-of-type(4)").slideUp();
-                    $(".s3_box2 tr:nth-of-type(6)").slideUp();
-                    $(".s3_box2 tr:nth-of-type(8)").slideUp();
-                    $(".s3_box2 tr:nth-of-type(10)").slideUp();
-                });
-
-                $(".toggle2").click(function () {
-                    $(".s3_box2 tr:nth-of-type(4)").slideToggle();
-                    $(".s3_box2 tr:nth-of-type(2)").slideUp();
-                    $(".s3_box2 tr:nth-of-type(6)").slideUp();
-                    $(".s3_box2 tr:nth-of-type(8)").slideUp();
-                    $(".s3_box2 tr:nth-of-type(10)").slideUp();
-                });
-
-                $(".toggle3").click(function () {
-                    $(".s3_box2 tr:nth-of-type(6)").slideToggle();
-                    $(".s3_box2 tr:nth-of-type(2)").slideUp();
-                    $(".s3_box2 tr:nth-of-type(4)").slideUp();
-                    $(".s3_box2 tr:nth-of-type(8)").slideUp();
-                    $(".s3_box2 tr:nth-of-type(10)").slideUp();
-                });
-
-                $(".toggle4").click(function () {
-                    $(".s3_box2 tr:nth-of-type(8)").slideToggle();
-                    $(".s3_box2 tr:nth-of-type(2)").slideUp();
-                    $(".s3_box2 tr:nth-of-type(4)").slideUp();
-                    $(".s3_box2 tr:nth-of-type(6)").slideUp();
-                    $(".s3_box2 tr:nth-of-type(10)").slideUp();
-                });
-
-                $(".toggle5").click(function () {
-                    $(".s3_box2 tr:nth-of-type(10)").slideToggle();
-                    $(".s3_box2 tr:nth-of-type(2)").slideUp();
-                    $(".s3_box2 tr:nth-of-type(4)").slideUp();
-                    $(".s3_box2 tr:nth-of-type(6)").slideUp();
-                    $(".s3_box2 tr:nth-of-type(8)").slideUp();
-                });
-            });
-        </script>
+        <script src="js/sub_review.js"></script>
 
         <!-- Q&A -->
         <a name="q_a">
@@ -732,39 +628,7 @@
     </div>
 
     <!-- Q&A 접었다가 펼치기 -->
-    <script>
-        $(document).ready(function () {
-            $(".a_box1").slideUp();
-            $(".a_box2").slideUp();
-
-            $(".q_a1").click(function () {
-                $(".a_box1").slideToggle();
-                $(".a_box2").slideUp();
-            });
-
-            // if($(".a_box1").attr("style","display:none;")){
-            //     $('#bgp').height('1100');
-            //     $('#section4').height('500');
-            // } else{
-            //     $('#bgp').height('1500');
-            //     $('#section4').height('900');
-            // }
-
-            $(".q_a2").click(function () {
-                $(".a_box2").slideToggle();
-                $(".a_box1").slideUp();
-            });
-
-            // if($(".a_box2").attr("style","display:none;")){
-            //     $('#bgp').height('1100');
-            //     $('#section4').height('500');
-            // } else{
-            //     $('#bgp').height('1500');
-            //     $('#section4').height('900');
-            // }
-
-        });
-    </script>
+    <script src="js/sub_qna.js"></script>
 
     <!-- 배송/교환/환불 -->
     <a name="exchange">
